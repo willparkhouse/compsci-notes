@@ -1,0 +1,1006 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0088)http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html -->
+<html><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Requirements Document Example</title>
+  </head>
+<body bgcolor="#FFFFFF">
+<h2>Table of Contents</h2>
+
+1.&nbsp;<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#Intro">Introduction</a><br>
+2.&nbsp;<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#Func">Functional Objectives</a><br>
+3.&nbsp;<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#Nonfunc">Non-Functional Objectives</a><br>
+4.&nbsp;<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#ContextModel">Context Model</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#Goal">Goal Statement</a>&nbsp;&nbsp;&nbsp;
+<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#CD">Context Diagram</a>&nbsp;&nbsp;&nbsp;
+<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#Externals">System Externals</a>&nbsp;&nbsp;&nbsp;<br>
+5.&nbsp;<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#UseCaseModel">Use Case Model</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#UCD">System Use Case Diagram</a>&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#UCDesc">Use Case Descriptions</a>&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#Login">Login User</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#Register">Register User</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#Preferences">Register Preferences</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Place Order &nbsp;<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#CustPlace">(Customer)</a>
+&nbsp;<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#SAPlace">(Sales Agent)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#Charge">Charge Customer</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#Bill">Bill Customer</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#Request">Request Assistance</a><br>
+6.&nbsp;<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#ClassModel">Class Model</a><br>
+7.&nbsp;<a href="http://web.cse.ohio-state.edu/~bair.41/616/Project/Example_Document/Req_Doc_Example.html#Appendix">Appendix</a><br>
+<a name="Intro"><h1>1. Introduction</h1></a>
+<h2>1.1 Purpose of Document</h2>
+This is a Requirements Specification document for a new web-based
+sales system for Solar Based Energy, Inc. (SBE).  SBE is a distributor of
+alternative energy products including windmills, photovoltaics and
+fuel cells. The new system will upgrade the current websites to
+provide customers and employees customized browsing of the product 
+catalog and the ability to complete product orders on-line.  This document
+describes the scope, objectives and goal of the new system. In addition
+to describing non-functional requirements, this document models the functional
+requirements with use cases, interaction diagrams, and class models.  This 
+document is intended to direct the design and 
+implementation of the target system in an object oriented language.
+<h2>1.2 Project Summary</h2>
+<table>
+<tbody><tr><th align="left">Project Name:</th><td>SBE Sales System</td></tr>
+<tr><th align="left">Project Manager:</th>
+                  <td>Mary Beth Lohse, CEO, CIS 616 Consulting</td></tr>
+<tr><th align="left" valign="top">Project Analysts:</th>
+      <td>Benjamin B. Bolz, Lead Analyst<br>
+          Cynthia C. Caldwell, Senior Analyst<br>
+          David D. Dreese, Analyst<br>
+          Helen H. Hitchcock, Analyst</td></tr>
+<tr><th align="left" valign="top">Responsible Users:</th>
+                   <td>Imogene I. Ives, President of SBE<br>
+                       Benjamin B. Baker, Vice-President of Sales</td>
+            
+</tr></tbody></table>
+<h2>1.3 Background</h2>
+SBE sells state-of-the-art alternative energy systems utilizing
+wind and solar power.  SBE customers include both individuals and
+businesses interested in incorporating wind or solar energy sources
+into either new or existing construction.  SBE has identified two
+trends that they believe will cause explosive growth in the demand
+for their products.  The first is the continuing energy crisis in
+the western United States.  The second is the maturation of fuel
+cell technology which provides a feasible system for storing excess
+power generation for later use.
+SBE sells state-of-the-art alternative energy systems utilizing 
+wind and solar power. SBE customers include both individuals and 
+businesses interested in incorporating wind or solar energy sources 
+into either new or existing construction. SBE has identified several 
+trends that they believe will cause explosive growth in the demand for their 
+products. They include the growing consumer unease with deregulated energy 
+markets, the potential for disruptions to energy imports, and the maturation 
+of fuel cell technology which 
+provides a feasible system for storing excess power
+generation for later use. 
+<p>
+Because of the innovative and technical nature of their products, 
+SBE employs sales agents who can guide customers through the
+process of choosing an alternative energy system. 
+Other SBE employees are identified as a product "owners".  The product
+owner is the expert on a particular product or product line. 
+As the authoritative source of product information he produces
+whitepapers--highly technical and focused documents on product 
+specifications.
+</p><p>
+As alternative energy becomes more mainstream,
+SBE anticipates changes in the needs of their customers.
+Some customers will be more knowledgeable
+and will need less assistance from a sales agent.  
+Expanding sales outside the United States will drive the
+need to service customers in languages other than English.
+</p><p>
+Currently there are two separate web sites.  The public website
+(www.sbe.com) is static HTML.  It provides general information
+about SBE and its products.   Customers who are interested in
+ordering are provided contact information for the nearest
+SBE sales office.  The internal website (www.sbesales.com) is restricted
+to SBE employees and provides detailed product information.  Sales orders
+are placed by agents on this site.  Two different Oracle databases underly 
+these sites.
+</p><p>
+Problems with the current system include
+</p><ul>
+<li>the information available on the public website is too limited
+    and the user cannot immediately place an order
+</li><li>the existence of two databases means information is often
+    inconsistent or incorrect
+</li><li>users who need more technical information have difficulty accessing
+    the relevant whitepapers
+</li><li>sales agents have difficulty reaching product owners
+</li></ul>
+Imogene I. Ives,
+President of SBE has requested that an analysis be done with a view to 
+reengineering the current sales system.
+The new system should allow customers direct access to product
+information and ordering as well as continuing to provide support to 
+the existing sales agent network.
+<h2>1.4 Project Scope</h2>
+The scope of this project is a web-based system that supports the  
+marketing of SBE products directly
+to customers as well as through the existing sales agent network.
+Advertising of products, inventory control, 
+and account billing are not part of this project.
+<p>
+The two current web sites will be replaced by this new system.  In addition,
+changes to the logical and physical design of the current databases
+are expected.  The actual implementation of a new database system is not
+part of this project.  A web search engine and language translator will
+be obtained as purchased components for the new system.  Their internal 
+details are not part of this project.  Issues of website security, other 
+than password protection within the site, are not part of this project.
+
+</p><h2>1.5 System Purpose</h2>
+<h3>1.5.1 Users</h3>
+Those who will primarily benefit from the new system and those who
+will be affected by the new system include
+<dl>
+<dt>Customers:
+    </dt><dd>Upon implementation of the new system, customers will
+        find site navigation, product identification and product
+        ordering easier.  Customers will be able to choose whether
+        to buy directly from SBE or work with a sales agent.
+         
+</dd><dt>Sales Agents:
+    </dt><dd>The new system will provide sales agents with more detailed,
+        accurate and up-to-date product information.  They will be
+        informed of potential customers more quickly and they will
+        have faster access to the product owner.
+</dd><dt>Product Owners:
+    </dt><dd>Product owners will be allowed to maintain the data about
+        their products directly.  This will eliminate delays in
+        getting new products or changed product specifications into
+        the system.
+</dd><dt>Customer Service Department:
+    </dt><dd>The new system should reduce the workload of Customer Service
+        as customers are able to find the information they need from
+        the web-site.
+</dd><dt>Marketing Department:
+    </dt><dd>Site navigation data could be sent to the Marketing
+        Department.  Understanding how a customer uses the web site
+        to make a purchase will result in improvements in getting
+        and keeping customers.
+</dd><dt>Accounting Department:
+    </dt><dd>Purchase information will be sent directly to Accounting,
+        allowing for more accurate and timely billing.
+</dd><dt>Shipping Department:
+    </dt><dd>Purchase information will be sent directly to Shipping
+        for inventory control and order processing.
+</dd><dt>Information Technology Department:
+    </dt><dd> This department will be responsible for implementing the
+         new database, hosting the website and maintaining the system.
+</dd></dl>
+<h3>1.5.2 Location</h3>
+The system will be available to any potential customer using the
+Internet.  SBE employees may also use the system from any location
+and will be able to access restricted areas of the site through a password
+protection scheme. 
+<h3>1.5.3 Responsibilities</h3>
+The primary responsibilities of the new system:
+<ul>
+<li> provide customers direct access to up-to-date, accurate
+     product information on which they can make a decision
+     to buy
+</li><li> customize product offerings to specific users
+</li><li> allow differential access to web pages based on
+     type of user
+</li><li> allow customers to place an order through the website
+</li><li> allow customers to request the assistance of a sales agent
+</li><li> provide sales agents improved access to product information
+     and product owners
+</li><li> allow product owners to maintain information about their
+     products directly
+</li><li> allow access to whitepapers on demand
+</li><li> send order information directly to Accounting and Shipping
+</li></ul>
+Other desired features of the new system:
+
+<ul>
+<li>a consistent "look and feel" throughout the website
+</li><li>full-text searches of the web pages a user has permission
+    to access
+</li><li>on-line help in website navigation
+</li><li>password protection scheme for non-public web pages
+</li><li>translation of a web page to another language
+</li></ul>
+The system will not be responsible for account receivables,
+or inventory control.
+<h3>1.5.4 Need</h3>
+This system is needed in order to service the expected increase in
+demand for alternative energy products.  Replacement of the current
+websites will eliminate the shortcomings of those sites.  The new
+system will allow SBE to rapidly increase sales without a large
+and expensive increase in the number of sales agents and other
+customer support employees.
+<h2>1.6 Overview of Document</h2>
+The rest of this document gives the detailed specifications for the
+new sales system.  It is organized as follows:
+<ul>
+<li>Section 2: Functional Objectives<br>
+Each objective gives a desired behavior for the system, a business
+justification, and a measure to determine if the final system has
+successfully met the objective.  These objectives are organized by priority.
+In order for the new system to be considered successful, all high
+priority objectives must be met.
+</li><li>Section 3: Non-Functional Objectives<br>
+This section is organized by category.  Each objective specifies
+a technical requirement or constraint on the overall characteristics
+of the system.  Each objective is measurable.
+</li><li>Section 4: Context Model<br>
+This section gives a text description of the goal of the system, and a
+pictorial description of the scope of the system in a context diagram.
+Those entities outside the system that interact with the system are described.
+</li><li>Section 5: Use Case Model<br>
+The specific behavioral requirements of the system are detailed in
+a series of use cases.  Each use case accomplishes a business task
+and shows the interaction between the system and some outside actor.
+Each use case is described with both text and an interaction diagram.
+An interface prototype is also shown.
+The system use case diagram depicts the interactions between all
+use cases and system actors.
+</li><li>Section 6: Class Model<br>
+A class is a collection of objects in the system that have the
+same data and behavior.
+All analysis classes and their relationships are shown on the
+class diagram.
+</li><li>Section 7: An appendix containing a glossary that<br>
+defines terms specific to this project
+
+</li></ul>
+<a name="Func"><h1>2. Functional Objectives</h1></a>
+
+<h2>2.1 High Priority</h2>
+<ol>
+<li>The system shall allow for on-line product ordering by either
+the customer or the sales agent.  For customers, this will eliminate
+the current delay between their decision to buy and the placement
+of the order.  This will
+reduce the time a sales agent spends on an order by x%.
+The cost to process an order will be reduced to $y. 
+</li><li>The system shall reflect a new and changed product description within
+x minutes of the database being updated by the product owner.  This will 
+reduce the number of incidents of incorrectly displayed information by x%.  
+This
+eliminates the current redundant update of information, saving $y dollars
+annually.
+ 
+</li><li>The system shall display information that is customized based
+on the user's company, job function, application and locale.  This feature will
+improve service by reducing the mean number of web pages a user
+must navigate per session to x.  It should reduce unnecessary phone
+calls to sales agents and staff by x%.
+
+</li><li>The system shall allow employees to view the owner of any product.  
+An employee should be able to contact the correct owner
+in one phone call x% of the time.
+</li><li>The system shall allow a customer to directly contact the nearest sales 
+office in his region.  This will improve service by reducing the time
+to respond to a customer request to no more than x days.
+</li><li>The system shall provide accounting with accurate purchase transaction 
+data.  This will improve customer service by reducing billing complaints
+by x% and save $y in correcting inaccurate accounts.
+</li><li>The system shall provide shipping with accurate order data.  This will
+allow the order to be processed in x days and inventory to be updated 
+within y hours.
+</li></ol>
+<h2>2.2 Medium Priority</h2>
+<ol>
+<li>The system shall provide a search facility that will allow full-text
+searching of all web pages that the user is permitted to access.  The
+system must support the following searches:
+<ul>
+<li>find all words specified
+</li><li>find any word specified
+</li><li>find the exact phrase
+</li><li>Boolean search
+</li></ul>
+</li><li>The system shall make whitepapers available from the product page.  
+This will allow customers to
+answer product questions themselves, reducing customer support
+costs by $x annually. 
+</li></ol>
+<h2>2.3 Low Priority</h2>
+<ol>
+<li>The system shall allow the user's status to be stored for the
+next time he returns to the web site.  This will save the user x minutes
+per visit by not having to reenter already supplied data.
+</li><li>The system shall provide marketing with customer navigation
+information.  This information will allow marketing to determine
+what information prompts a purchase and help target potential
+customers more effectively.  This will increase annual revenue
+by $x in additional sales.
+</li><li>The system shall translate web pages into the languages of
+the countries where the company's products are available.  This
+will improve customer service and reduce the number of support
+calls from foreign customers by x%.
+</li></ol>
+<a name="Nonfunc"><h1>3. Non-Functional Objectives</h1></a>
+<h2>3.1 Reliability</h2>
+<ul>
+<li>The system shall be completely operational at least x% of
+the time.
+</li><li>Down time after a failure shall not exceed x hours.
+</li></ul>
+<h2>3.2 Usability</h2>
+<ul>
+<li>A sales agent should be able to use the system in his
+job after x days of training.
+</li><li>A user who already knows what product he is interested in should
+be able to locate and view that page in x seconds.
+</li><li>The number of web pages navigated to access product information
+ from the top page should not exceed x.
+</li></ul>
+<h2>3.3 Performance</h2>
+<ul>
+<li>The system should be able to support x simultaneous users.
+</li><li>The mean time to view a web page over a 56Kbps modem connection
+shall not exceed x seconds.
+</li><li>The mean time to download and view and whitepaper in PDF format
+for a 56Kbps modem shall not exceed x seconds.
+</li></ul>
+<h2>3.4 Security</h2>
+<ul>
+<li>The system shall provide password protected access to web pages that
+are to be viewed  only by employees.
+</li><li>Transaction data must be transmitted in encrypted form.
+</li></ul>
+<h2>3.5 Supportability</h2>
+<ul>
+<li>The system should be able to accommodate new products and
+product lines without major reengineering.
+</li><li>The system web site shall be viewable from Internet Explorer 4.0
+or later, Netscape Navigator/Communicator 3.0 or later and the America Online
+web browser version 3.0 or later.
+</li></ul>
+<h2>3.6 Online user Documentation and Help</h2>
+<ul>
+<li>The system shall provide a web page that explains how to 
+navigate the site.  This page should be customized based on
+what pages that user is allowed to access.
+</li><li>This help page should be accessible from all other pages.
+</li></ul>
+<h2>3.7 Purchased Components</h2>
+<ul>
+<li>A language translation tool from English to French and English to German
+will be needed.
+</li><li>A web site search engine will be needed.
+</li></ul>
+<h2>3.8 Interfaces</h2>
+The system must interface with
+<ul>
+<li>The current Oracle database systems for product and
+    order information
+</li><li>The current Oracle Financial accounting system
+</li><li>The current AccountPro inventory system
+</li><li>The acquired language translation tool 
+</li><li>The acquired web site search engine
+</li></ul>
+<a name="ContextModel"><h1>4. The Context Model</h1></a>
+<h2><a name="Goal">4.1 Goal Statement</a></h2>
+The goal of the system is to allow SBE to increase sales revenue by x%
+over the next y years with only a z% increase in sales and customer
+service staff by
+<ul>
+<li>allowing complete and accurate customer and order information
+    to be captured directly from the customer as well as from
+    sales agents
+</li><li>providing customers and sales agents fast access to up-to-date and 
+    accurate product information and whitepapers.
+</li></ul>
+<h2><a name="CD">4.2 Context Diagram</a></h2>
+<center>
+<img src="./Requirements Document Example_files/ContextDiagram.gif">
+</center>
+<h2><a name="Externals">4.3 System Externals</a></h2>
+<dl>
+<dt>Customer</dt>
+   <dd>A customer is any user of the system that has not identified
+       himself as an SBE employee.  A customer may search for public
+       product information by keyword, access whitepapers for a
+       particular product, order a product or request assistance
+       from a sales agent.  
+       A customer who provides personal information
+       will get search and query results customized to his preferences.
+</dd><dt>Sales Agent</dt>
+    <dd>A sales agent is a user who has been verified as an SBE
+       employee.  A sales agent  may access all available product
+       information and whitepapers, including the product owner.
+       A sales agent may place an order on behalf of a customer.  
+       He will be informed by the
+       system of any customers in his region who have requested
+       assistance.
+</dd><dt>Product Owner</dt>
+    <dd>The product owner is a user who has been verified as an
+       SBE employee.  The product owner may update product information
+       and whitepapers for those products for which he is responsible.
+</dd><dt>Accounting</dt>
+    <dd>The Accounting department is responsible for all SBE financial
+       transactions.  The Accounting department is informed of
+       all purchases and is responsible for later collection of
+       accounts receivable.
+</dd><dt>Shipping</dt>
+    <dd>The Shipping department is informed of purchases so that
+        it can process the order and update inventory.
+</dd><dt>Marketing
+    </dt><dd>The Marketing department is responsible for creating demand
+        for SBE products.  It will receive website navigation data
+        to use in planning marketing strategies.
+</dd></dl>
+    <hr>
+<a name="UseCaseModel"><h1>5. The Use Case Model</h1>
+</a><h2><a name="UseCaseModel"></a><a name="UCD">5.1 System Use Case Diagram</a></h2>
+<img src="./Requirements Document Example_files/SystemUseCase.gif">
+<h2><a name="UCDesc">5.2 Use Case Descriptions (for selected cases) </a></h2>
+Notes:
+<ul>
+<li>For all use cases, the user can cancel the use case at
+any step that requires user input.  This action ends the
+use case.  Any data collected during that use case is lost.
+</li><li>For all use cases that require a logged in user, the current
+    login session is updated during the use case to reflect the
+    navigation paths through the use case.
+</li></ul>
+    
+<h3><a name="Login">Login User</a></h3>
+<table border="1">
+<tbody><tr valign="top">
+<td> Use Case Name:</td>
+<td>Login User  </td>
+</tr>
+<tr valign="top">
+<td> Summary:</td>
+<td>In order to get personalized or restricted information, place orders
+or do other specialized transactions a user must login so that
+that the system can determine his access level. </td>
+</tr>
+<tr valign="top">
+<td> Basic Flow:</td>
+<td> <ol>
+<li>The use case starts when a user indicates that he wants to login.
+</li><li>The system requests the username and password.
+</li><li>The user enters his username and password.
+</li><li>The system verifies the username and password against all registered
+    users.
+</li><li>The system starts a login session and displays a welcome message based on 
+    the user's preferences.
+</li></ol>
+</td>
+</tr>
+<tr valign="top">
+<td> Alternative Flows:</td>
+<td><dl>
+<dt>Step 4:</dt> <dd>if username is invalid, the use case goes back to step 2.
+    </dd>
+<dt>Step 4:</dt> <dd> if the password is invalid the system requests that the
+    user re-enter the password.  When the user enters another password
+    the use case continues with step 4 using the
+    original username and new password.</dd>
+</dl>  </td>
+</tr>
+<tr valign="top">
+<td> Extension Points:</td>
+<td> none  </td>
+</tr>
+<tr valign="top">
+<td> Preconditions:</td>
+<td>The user is registered.</td>
+</tr>
+<tr valign="top">
+<td> Postconditions:</td>
+<td> The user can now obtain data and perform functions according
+to his registered access level.  </td>
+</tr>
+<tr valign="top">
+<td> Business Rules:</td>
+<td> Some data and functions are restricted to certain types of users
+     or users with a particular access level. </td>
+</tr>
+</tbody></table>
+    
+<h3><a name="Register">Register User</a></h3>
+<table border="1">
+<tbody><tr valign="top">
+<td> Use Case Name:</td>
+<td>Register User  </td>
+</tr>
+<tr valign="top">
+<td> Summary:</td>
+<td>In order to get personalized or restricted information, place orders
+or do other specialized transactions a new user must register a username and password. </td>
+</tr>
+<tr valign="top">
+<td> Basic Flow:</td>
+<td> <ol>
+<li>The use case start when a user indicates that he wants to register.
+</li><li>The system requests a username and password.
+</li><li>The user enters a username and password.
+</li><li>The system checks that the username does not duplicate any
+    existing registered usernames.
+</li><li> The system requests a name (*),
+     street, city, state, zipcode(*), phone and email address.  Items
+     marked by (*) are required.
+</li><li> The user enters the information.
+</li><li> The system determines the user's location and access level and
+     stores all user information.
+</li><li> The system executes use case <em>Register Preferences.</em>
+</li><li>The system starts a login session and displays a welcome message based on 
+    the user's preferences.
+</li></ol>
+</td>
+</tr>
+<tr valign="top">
+<td> Alternative Flows:</td>
+<td><ul>
+<li>Step 4: If the username duplicates an existing username
+       the system displays a message and the use case goes back to step 2.
+</li><li>Step 5:  If the user does not enter a required field, a message
+       is displayed and the use case repeats step 4.
+</li></ul>  </td>
+</tr>
+<tr valign="top">
+<td> Extension Points:</td>
+<td> <em>Register Preferences</em>  </td>
+</tr>
+<tr valign="top">
+<td> Preconditions:</td>
+<td> none</td>
+</tr>
+<tr valign="top">
+<td> Postconditions:</td>
+<td> The user can now obtain data and perform functions according
+to his registered access level.  </td>
+</tr>
+<tr valign="top">
+<td> Business Rules:</td>
+<td> <ul>
+<li>A registered user's location is the SBE location nearest his
+     zip code. 
+</li><li>Access levels are
+<ul>
+    <li>0: A user can access only data classification 0
+    </li><li>1: The user can access data classification &lt;= 1
+    </li><li>2: The user can access data classification &lt;= 2
+</li></ul>
+The default access level is 0.
+</li></ul></td>
+</tr>
+</tbody></table>
+    
+<h3><a name="Preferences">Register Preferences</a></h3>
+<table border="1">
+<tbody><tr valign="top">
+<td> Use Case Name:</td>
+<td>Register Preferences  </td>
+</tr>
+<tr valign="top">
+<td> Summary:</td>
+<td>This use case allows a registered user to enter or change his 
+preferences. </td>
+</tr>
+<tr valign="top">
+<td> Basic Flow:</td>
+<td> <ol>
+<li>The use case start when a user indicates that he wants to enter
+    or modify his preferences.
+</li><li>The system displays all current product lines.  It indicates
+    any product lines that the user has currently selected.
+</li><li>The user selects/deselects product lines.
+</li><li>The system displays current language preferences. It indicates
+    the language preference currently selected.
+</li><li>The user may select a different language preference.
+</li><li> The system stores any change to language preference.
+</li></ol>
+</td>
+</tr>
+<tr valign="top">
+<td> Alternative Flows:</td>
+<td>
+none
+</td>
+</tr>
+<tr valign="top">
+<td> Extension Points:</td>
+<td> none  </td>
+</tr>
+<tr valign="top">
+<td> Preconditions:</td>
+<td> The user is logged in.</td>
+</tr>
+<tr valign="top">
+<td> Postconditions:</td>
+<td> The system can customize a welcome message based
+     on the user's revised preferences. </td>
+</tr>
+<tr valign="top">
+<td> Business Rules:</td>
+<td> Language selections allowed are are English (default),
+     French and German.</td>
+</tr>
+</tbody></table>
+    
+<h3><a name="CustPlace">Place Order (Customer)</a></h3>
+<table border="1">
+<tbody><tr valign="top">
+<td> Use Case Name:</td>
+<td>Place Order<br>
+    Scenario: Customer places his own order. </td>
+</tr>
+<tr valign="top">
+<td> Summary:</td>
+<td>This use case allows a registered customer to place
+an order for a product. </td>
+</tr>
+<tr valign="top">
+<td> Basic Flow:</td>
+<td> <ol>
+<li>The use case start when a customer indicates he wants to
+    place an order for the current product being displayed.
+</li><li>The system displays the customer's information: name,
+street, city, zip, phone, email.
+</li><li>The customer may add or change any of the information.
+</li><li>The system stores any changes.  If the zipcode has changed,
+    the system modifies the customer's location.
+</li><li>The system requests the quantity to order and the shipping address.
+</li><li>The customer enters quantity and shipping address.
+</li><li>The system displays the payment options available to
+    this customer.
+</li><li>The customer selects a payment option.
+</li><li>The system completes the payment by executing
+    use case <em> Charge Customer</em> or <em>Bill Customer</em>
+    depending on which option was selected.
+</li><li>The system stores the order information, decreases the
+    quantity on hand for the product and sends the
+    order details to Shipping.
+</li><li>The system displays a order completion message and sends
+    a receipt to the user.
+</li></ol>
+</td>
+</tr>
+<tr valign="top">
+<td> Alternative Flows:</td>
+<td>
+<dl>
+<dt>Step 9:</dt>  <dd>If the selected payment method could not be
+         validated, go to step 8 to get
+         another payment option.</dd>
+<dt>Step 10:</dt> <dd>If the quantity on hand is not sufficient for
+         this order, a message is sent to the customer
+         and the use case is canceled.</dd>
+
+</dl>
+</td>
+</tr>
+<tr valign="top">
+<td> Extension Points:</td>
+<td> <em>Charge Customer</em>; <em>Bill Customer</em>  </td>
+</tr>
+<tr valign="top">
+<td> Preconditions:</td>
+<td> The customer is logged in and has completed a
+     search for the product to be ordered</td>
+</tr>
+<tr valign="top">
+<td> Postconditions:</td>
+<td> The product is sold.</td>
+</tr>
+<tr valign="top">
+<td> Business Rules:</td>
+<td> If a customer has been previously authorized for billing by a 
+     sales agent, the customer may billed for the order.  Otherwise
+     the customer must pay in full by credit card at the time
+     of the order.</td>
+</tr>
+</tbody></table>
+    
+<h3><a name="SAPlace">Place Order (Sales Agent)</a></h3>
+<table border="1">
+<tbody><tr valign="top">
+<td> Use Case Name:</td>
+<td>Place Order<br>
+    Scenario: Sales agent places an order for a customer. </td>
+</tr>
+<tr valign="top">
+<td> Summary:</td>
+<td>This use case allows a sales agent to place
+an order for a registered customer. It also allows the
+sales agent to change the customers access level and
+payment options. </td>
+</tr>
+<tr valign="top">
+<td> Basic Flow:</td>
+<td> <ol>
+<li>The use case starts when a sales agent indicates he wants to
+    place an order for a customer.
+</li><li>The system requests the customers username.
+</li><li>The sales agent enters the username.
+</li><li>The system displays the registered customer's information,
+    including access level and payment options.
+</li><li>The sales agent makes changes to the customer information.
+</li><li>The system stores any updated information.
+</li><li>The system requests the product id, quantity and shipping address.
+</li><li>The sales agent enters the product id, quantity and shipping address.
+</li><li>The system displays payment options for this customer.
+</li><li>The sales agent selects a payment option.
+</li><li>The system completes the payment by executing
+    use case <em>Charge Customer</em> or <em>Bill Customer</em>
+</li><li>The system stores the order information, decreases the
+    quantity on hand for the product, sends the
+    order details to Shipping.
+</li><li>The system displays a order completion message and sends
+    a receipt to the customer.
+</li></ol>
+</td>
+</tr>
+<tr valign="top">
+<td> Alternative Flows:</td>
+<td>
+<dl>
+<dt>Step 11:</dt> <dd>If the selected payment method could not be
+         validated, go to step 10 to get
+         another payment option.</dd>
+<dt>Step 12:</dt><dd>If the quantity on hand is not sufficient for
+         this order, a message is sent to the sales agent
+         and the use case is canceled.</dd>
+</dl>
+</td>
+</tr>
+<tr valign="top">
+<td> Extension Points:</td>
+<td> <em>Charge Customer</em>; <em>Bill Customer</em>  </td>
+</tr>
+<tr valign="top">
+<td> Preconditions:</td>
+<td> The sales agent is logged in, knows the username
+     of the customer, his payment method and the product
+     to be ordered.</td>
+</tr>
+<tr valign="top">
+<td> Postconditions:</td>
+<td> The product is sold and the sales agent is credited with
+     the sale.</td>
+</tr>
+<tr valign="top">
+<td> Business Rules:</td>
+<td> Sales agent have the authority to allow a customer to be
+     billed.  They may also increase the customer's access
+     level to product data.</td>
+</tr>
+</tbody></table>
+    
+<h3><a name="Charge">Charge Customer</a></h3>
+<table border="1">
+<tbody><tr valign="top">
+<td> Use Case Name:</td>
+<td>Charge Customer</td>
+</tr>
+<tr valign="top">
+<td> Summary: </td>
+<td>This use case charges the order currently being
+     placed to a credit card. </td>
+</tr>
+<tr valign="top">
+<td> Basic Flow:</td>
+<td> <ol>
+<li>The use case begins when a user selects "Credit Card" as
+    a payment option, while in use case <em>Place Order</em>
+</li><li>The system requests the credit card number, type and expiration
+    date.
+</li><li>The user enters the information.
+</li><li>The system verifies that the credit card is valid for the
+    amount to be charged and completes the credit card
+    transaction.
+</li><li>The system stores the payment details and returns a
+    success message
+</li></ol>
+</td>
+</tr>
+<tr valign="top">
+<td> Alternative Flows:</td>
+<td>Step 4: If the credit card cannot be validated the
+    use case ends, returning a failure message</td>
+</tr>
+<tr valign="top">
+<td> Extension Points:</td>
+<td> none  </td>
+</tr>
+<tr valign="top">
+<td> Preconditions:</td>
+<td>The system is executing use case <em>Place Order</em>.</td>
+</tr>
+<tr valign="top">
+<td> Postconditions:</td>
+<td>The customer has been charged for the order. </td>
+</tr>
+<tr valign="top">
+<td> Business Rules:</td>
+<td>Credit cards accepted are Visa, MasterCard and Discover.  </td>
+</tr>
+</tbody></table>
+    
+<h3><a name="Bill">Bill Customer</a></h3>
+<table border="1">
+<tbody><tr valign="top">
+<td> Use Case Name:</td>
+<td>Bill Customer</td>
+</tr>
+<tr valign="top">
+<td> Summary: </td>
+<td>This system gets the billing details for the
+     order.  They will be part of the Daily Transactions
+     Report sent to Accounting in use case <em>Report Daily
+     Transactions</em>.  Billing and collection is handled
+     outside this system by Accounting.</td>
+</tr>
+<tr valign="top">
+<td> Basic Flow:</td>
+<td> <ol>
+<li>The use case begins when a user selects "Bill me" as
+    a payment option, while in use case <em>Place Order</em>
+</li><li>The system requests the billing address.
+</li><li>The user enters the billing address.
+</li><li>The system stores the payment details.
+</li></ol>
+</td>
+</tr>
+<tr valign="top">
+<td> Alternative Flows:</td>
+<td>none</td>
+</tr>
+<tr valign="top">
+<td> Extension Points:</td>
+<td> none  </td>
+</tr>
+<tr valign="top">
+<td> Preconditions:</td>
+<td>The system is executing use case <em>Place Order</em> and the
+    customer is authorized for billing.</td>
+</tr>
+<tr valign="top">
+<td> Postconditions:</td>
+<td>Accounting can bill the customer for this order. </td>
+</tr>
+<tr valign="top">
+<td> Business Rules:</td>
+<td>Customers can be billed if it was previously authorized
+    by a sales agent.</td>
+</tr>
+</tbody></table>
+    
+<h3><a name="Request">Request Assistance</a></h3>
+<table border="1">
+<tbody><tr valign="top">
+<td> Use Case Name:</td>
+<td>Request assistance</td>
+</tr>
+<tr valign="top">
+<td> Summary: </td>
+<td> This use case allows anyone using the web site to request
+    a contact from a sales agent.</td>
+</tr>
+<tr valign="top">
+<td> Basic Flow:</td>
+<td> <ol>
+<li>  The use case starts when the customer asks for assistance.
+</li><li>  The system displays all
+      product lines, and provides space for the customer to
+      type a (optional) question.
+</li><li>  The customer selects the product line(s) he is interested in
+      and may enter a question.
+</li><li>  The system asks for a name, email address and zip code.
+</li><li>  The customer enters name, email address and zip code.
+</li><li>  The system selects a sales agent based on the customer's
+      location and product lines selected in step 3.
+</li><li>  The system displays message informing the customer
+      of which agent will be in contact.
+</li><li>  The system sends the request information to the selected sales agent.
+      It stores the request information for registered customers.
+
+</li></ol>
+</td>
+</tr>
+<tr valign="top">
+<td> Alternative Flows:</td>
+<td><dl>
+<dt>Step 4:</dt>  <dd>If the customer  is registered and
+    has previously provided his name, email address and zip code
+    the use case skips to Step 6.</dd>
+<dt>Step 6:</dt> <dd>If the customer is registered and has previously
+    been assisted by a sales agent, that same agent is selected.</dd>
+</dl>  </td>
+</tr>
+<tr valign="top">
+<td> Extension Points:</td>
+<td> none  </td>
+</tr>
+<tr valign="top">
+<td> Preconditions:</td>
+<td>none</td>
+</tr>
+<tr valign="top">
+<td> Postconditions:</td>
+<td>The sales agent has the customer contact information. </td>
+</tr>
+<tr valign="top">
+<td> Business Rules:</td>
+<td>Customers are assigned to a sales agent at the closest
+    SBE location whose specialties most closely match the
+    the product lines the customer has indicated.  If there is more 
+    than one such sales agent, the one with the fewest customer
+    assistance requests is selected.  That sales agent continues to be
+    assigned to that customer for any future requests.
+    The actual contact between the sales
+    agent and the customer is outside the system.  </td>
+</tr>
+</tbody></table>
+<!-- use case template 
+<h3>????</h3>
+<table border=1>
+<tr  valign=top>
+<td> Use Case Name:</td>
+<td></td>
+</tr>
+<tr  valign=top>
+<td> Summary:</td>
+<td></td>
+</tr>
+<tr  valign=top>
+<td> Basic Flow:</td>
+<td> <ol>
+<li>
+<li>
+<li>
+<li>
+<li>
+</ol>
+</td>
+</tr>
+<tr  valign=top>
+<td> Alternative Flows:</td>
+<td><ul>
+<li>
+<li>
+    
+    
+</ul>  </td>
+</tr>
+<tr valign=top>
+<td> Extension Points:</td>
+<td> none  </td>
+</tr>
+<tr valign=top>
+<td> Preconditions:</td>
+<td></td>
+</tr>
+<tr valign=top >
+<td> Postconditions:</td>
+<td> </td>
+</tr>
+<tr valign=top >
+<td> Business Rules:</td>
+<td>  </td>
+</tr>
+</table>
+-->
+<a name="ClassModel"><h1>6. The Class Model</h1>
+<img src="./Requirements Document Example_files/Class.gif">
+</a><p><a name="ClassModel">
+</a><a name="Appendix"></a></p><h1><a name="Appendix">7. Appendix</a></h1><a name="Appendix">
+<h2>Glossary</h2>
+<dl>
+<dt>Whitepaper</dt>
+<dd>Technical paper containing detailed product specifications.</dd>
+</dl>
+  
+
+</a></body></html>

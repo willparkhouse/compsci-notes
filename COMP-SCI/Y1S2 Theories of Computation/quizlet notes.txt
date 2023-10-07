@@ -1,0 +1,297 @@
+prompt 
+Can you write a series of term-definition pairs, like this :
+"Finding Problem:","A problem that results in an index if specified constraints matched." 
+In quotations and separated by a comma, to be used for flashcards for the following topics (use your knowledge to make terse definitions):
+
+
+"Matching Problem:", "A problem that determines if a given input matches specific constraints."
+"Finding Problem:", "A problem that locates instances of specified constraints within an input."
+"Regular Expression (Regex):", "A pattern used to define constraints for matching or finding problems."
+"Alphabet:", "A finite set of characters (e.g., ASCII, UNICODE) used in words."
+"Word:", "A sequence of characters from a specified alphabet."
+"Language:", "A set of words, i.e., a subset of all possible words from an alphabet."
+"Precedence of Regular Expressions:", "The order in which regex elements are evaluated (juxtaposition > | > *)."
+"Decidable:", "A decision problem that can be solved with a yes/no answer by a given program."
+"Automata:", "Abstract machines used to model and analyze the behavior of systems responding to inputs."
+"Deterministic Automata:", "Automata where each state transition is uniquely determined by the current state and input."
+"States:", "Circles in automata representing possible conditions in the system."
+"Accepting State:", "A state that, when reached after processing an input, indicates a successful match."
+"Rejection State:", "A state that, when reached after processing an input, indicates an unsuccessful match."
+"Deterministic Finite Automaton (DFA):", "An automaton with a finite set of states, deterministic transitions, and accepting/rejecting states."
+"Isomorphisms:", "Bijections between two DFAs that preserve their structure and behavior."
+"Partial Deterministic Automata:", "Automata with incomplete transition functions or missing transitions."
+"Non-Deterministic Automata:", "Automata where multiple transitions are possible for a given state and input."
+"Non-Deterministic Finite Automaton (NFA):", "An automaton with multiple initial states and/or multiple possible next states."
+"Determinize:", "To convert an NFA into an equivalent DFA."
+"εNFA:", "Non-deterministic automaton with epsilon transitions, allowing state changes without input."
+"Slow Transitions:", "Series of epsilon transitions followed by a regular transition in an εNFA."
+"Slow Acceptance States:", "Series of epsilon transitions leading to an acceptance state in an εNFA."
+"Mathematical Induction:","A proof technique used to prove statements for all natural numbers by establishing a base case and an inductive step."
+"Basis Step:","The initial step in mathematical induction, where the statement is proven true for a specific value, usually P(0) or P(1)."
+"Inductive Step:","The second step in mathematical induction, where the statement is assumed to be true for P(n) and used to prove the statement is true for P(n+1)."
+"Weak Induction:","A form of mathematical induction that relies on proving the statement for P(n) implies the statement for P(n+1)."
+"Strong Induction:","A form of mathematical induction that relies on proving the statement for all values from the base case to P(n) implies the statement for P(n+1)."
+"Kleene's Theorem:","A theorem stating that for a language L, it can be described by a regular expression if and only if its matching problem can be solved by a deterministic finite automaton (DFA)."
+"Generalized NFA:","A non-deterministic finite automaton where each arrow is labeled with a regular expression, used to convert back into a regular expression."
+"Epsilon-NFA:","A non-deterministic finite automaton that allows transitions without consuming any input symbols, represented by epsilon transitions."
+"Intermediate States:","States in a generalized NFA, other than the start and end states, that are removed to convert the generalized NFA back into a regular expression."
+"Regular Language:", "A language that can be represented by a regular expression or a deterministic finite automaton (DFA)."
+"Complement of a Regular Language:", "The set of strings not in the original regular language, also a regular language."
+"Union of Regular Languages:", "The set of strings that belong to either of the two regular languages, resulting in a regular language."
+"Intersection of Regular Languages:", "The set of strings that belong to both regular languages, also forming a regular language."
+"Language Equivalence:", "A condition in which two deterministic finite automata (DFA) accept the same set of strings."
+"Testing Language Equivalence:", "A process to determine if two DFA's are equivalent by comparing their initial states, transitions, and accepting/rejecting conditions."
+"Minimal Automaton:", "A reduced automaton obtained by converting a regex into a DFA or partial DFA, where the number of states is minimized."
+"Reachable State:", "A state 's' in an automaton that has a path from an initial state to 's'."
+"Hopeful State:", "A state 's' in an automaton that has a path from 's' to an accepting state."
+"Equivalent States:", "Two states 's' and 't' in an automaton whose languages are the same, i.e., they accept the same set of words."
+"Minimal PDFA Conditions:", "A partial DFA is minimal if every state is hopeful, reachable, and every pair of equivalent states are equal."
+"Multiple Minimal PDFAs:", "There can be more than one minimal PDFA for the same language, with a unique isomorphism between them."
+"Removing Unreachable States:", "A step in minimizing a PDFA, where all states that are not reachable from the initial state are removed."
+"Removing Hopeless States:", "A step in minimizing a PDFA, where all states that do not have a path to an accepting state are removed."
+"Identifying Equivalent States:", "A step in minimizing a PDFA, where each set of states with the same language is identified as equivalent."
+"Finite Set:", "A set with a specific number of elements, known as its cardinality, which is a natural number.",
+"Infinite Set:", "A set with an unlimited number of elements, making it impossible to assign a specific cardinality.",
+"Cardinality:", "The size or number of elements in a set.",
+"Empty Set:", "A set with no elements, denoted as Ø or {}, with a cardinality of 0.",
+"Natural Numbers:", "The set N, which includes all positive integers (1, 2, 3, ...).",
+"Integers:", "The set Z, which includes all positive and negative whole numbers and zero (..., -2, -1, 0, 1, 2, ...).",
+"Rational Numbers:", "The set Q, which includes all numbers that can be expressed as a fraction (p/q) where p and q are integers and q ≠ 0.",
+"Real Numbers:", "The set R, which includes all numbers that can be represented on the number line, including rational and irrational numbers.",
+"Words in an Alphabet:", "The set of all possible combinations or sequences of elements from a given alphabet, such as {0, 1, 2}*.",
+"Languages in an Alphabet:", "The set of all possible subsets of words in a given alphabet, such as P({0, 1, 2}*)",
+"Countably Infinite:", "A set where there is a bijection or one-to-one correspondence between its elements and the natural numbers, making it possible to enumerate its elements.",
+"Bijection:", "A one-to-one correspondence between two sets where each element in one set is paired with exactly one element in the other set.",
+"Uncountable Infinite:", "A set that is so large that it cannot be put into a one-to-one correspondence with the natural numbers, making it impossible to enumerate its elements."
+"Non-regular language:", "A language that cannot be represented by a regular expression or finite automaton due to its complexity or infinite nature."
+"Well-bracketed word:", "A word composed of open brackets (a) and closed brackets (b) such that every open bracket has a corresponding closed bracket in the correct order."
+"External stack:", "A stack that uses additional memory outside of the computer's main memory, allowing for potentially unlimited memory allocation."
+"Accepting state:", "In a finite automaton, a state that represents the successful processing of input, indicating that the input string belongs to the language."
+"Non-accepting state:", "In a finite automaton, a state that represents the unsuccessful processing of input, indicating that the input string does not belong to the language."
+"Distinct states:", "In a finite automaton, states that have unique properties and cannot be combined or considered equivalent, leading to different outcomes when processing input strings."
+"Contradiction:", "A statement or conclusion that goes against established facts or principles, often used to disprove a hypothesis or argument."
+"Infinite states:", "A hypothetical situation in a finite automaton where there are infinitely many distinct states, which is impossible to represent with finite memory."
+"Language membership:", "The property of an input string belonging to a specific formal language, determined by whether a finite automaton can reach an accepting state when processing the input."
+"Pumping lemma for regular languages:", "A theorem that provides a criterion to determine if a language is non-regular by demonstrating that it cannot be 'pumped' while maintaining language membership."
+"Context-Free Grammar:", "A 4-tuple (V, Σ, R, S) used to generate languages, where V is a set of non-terminals, Σ is a set of terminals, R is a set of production rules, and S is the start variable."
+"Non-Terminal:", "A symbol in a context-free grammar that can be replaced by a string of terminals and non-terminals according to production rules."
+"Terminal:", "A symbol in a context-free grammar that cannot be replaced or further reduced by production rules."
+"Production Rule:", "A rule in a context-free grammar that defines how a non-terminal can be replaced by a string of terminals and non-terminals."
+"Context-Free Language (CFL):", "A language generated by a context-free grammar."
+"Derivation:", "The process of starting with the start non-terminal and applying production rules to obtain a string of terminals in a context-free grammar."
+"Parse Tree:", "A tree representation of the derivation process in a context-free grammar, with non-terminals as internal nodes and terminals as leaves."
+"Matching Problem:", "The problem of determining whether a given word can be derived from a context-free grammar."
+"CYK Algorithm:", "An algorithm used to solve the matching problem for context-free grammars."
+"Parser:", "A program that constructs a derivation tree for a given word in a context-free grammar, if possible."
+"Regular Language:", "A language that can be expressed using a regular expression or a deterministic finite automaton (DFA)."
+"Conversion from DFA to CFG:", "The process of creating an equivalent context-free grammar for a given regular language represented by a deterministic finite automaton."
+"Ambiguity:", "A property of a context-free grammar when a word can have more than one derivation tree or parse tree."
+"Chomsky Normal Form (CNF):", "
+"Running Time of a Program:", "The amount of time it takes for a computer program to execute or complete its tasks."
+"Turing Machine:", "A simple formal model of mechanical computation that uses an infinite tape as its memory, a tape head to read and write symbols, and a set of instructions to perform computation."
+"Infinite Tape:", "An unlimited memory used by a Turing machine, divided into cells, each containing a symbol from the tape's alphabet."
+"Tape Head:", "The component of a Turing machine that can read and write symbols on the infinite tape and move left or right."
+"Input String in TM:", "The initial data on the infinite tape of a Turing machine, used as the basis for computation."
+"Accepting State in TM:", "A designated state in a Turing machine that signifies the successful completion of a computation and halts the machine."
+"Rejecting State in TM:", "A designated state in a Turing machine that signifies the unsuccessful completion of a computation and halts the machine."
+"Macro:", "A composite of multiple states in a Turing machine that functions as a subroutine or a composite node, simplifying the representation of complex operations."
+"Hacking in Turing Machines:", "The process of temporarily marking a character as blank in a Turing machine to store information or perform computation, and later restoring the original character."
+"Auxiliary Characters:", "A finite set of additional symbols used in a Turing machine to assist in computation or to signify specific actions or states."
+"Multitape Turing Machine:", "A variant of a Turing machine that uses multiple tapes, each with a head, to perform more efficient computations."
+"Two-Dimensional Turing Machine:", "A variant of a Turing machine that uses an infinite sheet as its memory, allowing for more complex computations and movements."
+"Simple Turing Machines (TMs):","A basic model of computation consisting of an infinite tape, a tape head, and a finite set of rules for reading, writing, and moving the tape head."
+"TM with Auxiliary Chars:","A Turing Machine that uses additional characters on the tape to aid in computation, while maintaining polynomial time complexity."
+"Two-tape TM:","A Turing Machine with two separate tapes and tape heads, often used to speed up computation by storing intermediate results on the second tape."
+"2D-TM:","A Turing Machine that operates on a two-dimensional grid, allowing it to move in four directions (up, down, left, right), providing additional computational capabilities."
+"Setting-up Program in Fancy TM:","A program that converts the initial configuration of a fancy TM into a corresponding configuration of a simple TM."
+"Simulating Program in Fancy TM:","A program that simulates each instruction of a fancy TM on a simple TM, effectively performing the same computation."
+"Finishing Program in Fancy TM:","A program that converts the output of a simple TM, which has simulated a fancy TM, back into the expected output of the fancy TM."
+"Polytime:","Short for Polynomial Time, a measure of the time complexity of an algorithm, indicating that the algorithm's running time grows at most polynomially with the input size."
+"Two-tape Turing Machine Conversion:","The process of simulating a two-tape Turing Machine using a single-tape Turing Machine by formatting the two tapes onto one tape, then converting using a macro of the auxiliary TM steps."
+"2-Dimensional Turing Machine Conversion:","The process of simulating a 2D Turing Machine using a single-tape Turing Machine by representing the 2D grid on a single tape and adapting the movement and computation rules accordingly."
+"Complexity Class P:", "The set of all languages that can be decided by a polynomial-time machine."
+"Decision Problems:", "Problems with a true/false output; P, NP, and EXP are complexity classes for decision problems."
+"Complexity Class EXP:", "Contains all complexities of the form O($x^n$); specified as $2^{n^k}$, which is equivalent to any $x^n$ value."
+"Encoding Data Types:", "Converting data types like strings, objects, or graphs into words for Turing Machines to process."
+"P, NP, and EXP Hierarchy:", "P ⊆ NP ⊆ EXP; it is unknown whether P = NP."
+"Non-deterministic Turing Machine (NDTM):", "A machine that introduces a 'choose' step, which can randomly choose between different paths."
+"Acceptable Words in TM:", "Words that a Non-deterministic Turing Machine may return true for; the set of acceptable words forms the language of the machine."
+"Polytime NDTM:", "A Non-deterministic Turing Machine that is guaranteed to terminate within polynomial time, regardless of the choices made."
+"Complexity Class NP:", "The set of all languages decided by a polynomial-time Non-deterministic Turing Machine."
+"Sudoku Checking Problem:", "Given a Sudoku puzzle and a candidate solution, check whether the solution is correct; a decision problem."
+"Sudoku Solvability Problem:", "Given a Sudoku puzzle, decide whether it's solvable; a decision problem."
+"Sudoku Solution Problem:", "Given a Sudoku puzzle, find a solution or return impossible; not a decision problem."
+"Hamiltonian Path:", "A path in a directed graph that visits each vertex exactly once."
+"Hamiltonian Path Problems:", "Checking, existence, and search problems related to finding Hamiltonian paths
+"Decision Problem on Words:", "A problem that requires determining whether a given word satisfies certain conditions or belongs to a particular language."
+"Decidable Problem:", "A problem for which there exists a Turing machine or algorithm that can determine the correct answer (true or false) for any given input."
+"Church's Thesis:", "The assertion that any decision problem on words that can be solved by an algorithm can be solved by a Turing machine."
+"Computable Function:", "A function for which there exists a Turing machine that can compute the function's output for any given input."
+"Primitive Java:", "A simplified version of the Java programming language with limited data types and operations, used for demonstrating basic computational concepts."
+"Basic Java:", "An extended version of Primitive Java that includes more complex features like while loops and recursion."
+"Total Function:", "A function that is defined for every possible input in its domain."
+"Partial Function:", "A function that is not defined for every possible input in its domain."
+"Turing Complete:", "A programming language or computational system that can simulate a Turing machine and is capable of expressing all computable functions."
+"Undecidable Problem:", "A problem for which there is no general algorithm or Turing machine that can determine the correct answer (true or false) for all possible inputs."
+"Semidecidable Problem:", "A decision problem for which there exists a Turing machine that can determine the correct answer (true) for inputs that belong to the language, but may run forever for inputs that do not belong to the language."
+"Primitive Recursive Function:", "A function that can be computed using Primitive Java, involving basic arithmetic operations and bounded loops."
+"Ackermann Function:", "An example of a total computable function that is not primitive recursive, defined using a recursive system of equations and known for its rapid growth rate."
+
+
+
+
+
+
+
+
+"Agent:", "An entity that perceives the world and acts in its environment."
+"Problem-Solving Agent:", "An agent that uses atomic representations and requires a precise definition of the problem and its goal/solution."
+"Search Problem:", "A problem that requires searching for a solution, such as games."
+"Formulation of a Search Problem:", "The process of formally defining the search problem by making assumptions about the environment."
+"Observable:", "The agent can know the current state of the environment."
+"Discrete:", "There are only finitely many actions at any state."
+"Known:", "The agent can determine which states are reached by which action."
+"Deterministic:", "Each action has exactly one outcome."
+"Initial State:", "The state the agent starts in."
+"Actions:", "The set describing the actions that can be executed in any state."
+"Transition Model:", "The states resulting from executing each action, a description of what each action does."
+"Goal Test:", "Determines if a state is a goal state."
+"Path Cost:", "A function that assigns a value to each path."
+"State Space:", "Defined by the initial state, actions, and transition model."
+"Frontier:", "The set of actions that the agent can perform at a given state."
+"Uninformed Search:", "A search where the agent has no additional information about states beyond the problem formulation."
+"Informed Search:", "A search where the algorithm has some knowledge of the outside world, such as a heuristic function."
+"Completeness:", "Whether the algorithm is guaranteed to find a solution provided one exists."
+"Optimality:", "Whether the strategy is optimal."
+"Time Complexity:", "A measure of the performance of an algorithm based on the time it takes to complete."
+"Space Complexity:", "A measure of the performance of an algorithm based on the memory it uses."
+"Branching Factor:", "The maximum number of successors of each node, denoted as b."
+"Depth:", "The depth of the shallowest goal node, denoted as d."
+"Maximum Length:", "The maximum length of any path in the state space, denoted as m."
+"Breadth-First Search:", "A search strategy that expands nodes in a breadth-first manner using a queue for expansion."
+"Depth-First Search:", "A search strategy that expands nodes in a depth-first manner using a stack for expansion."
+"Depth-Limited Search:", "A variant of DFS where the depth of the search is limited by a specified invariant, l."
+"Greedy Best-First Search:", "An informed search strategy that expands the node with the smallest heuristic."
+"A* Search Algorithm:", "An informed search strategy that evaluates nodes using the cost function f(n) = g(n) + h(n), where g(n) is the cost to reach the node and h(n) is the heuristic from that node to the goal."
+"Consistent Heuristic:", "A heuristic is consistent if the estimate to a goal is no greater than the ground-truth value to the goal."
+
+"Optimisation Problems:", "Problems that aim to find a solution that minimises or maximises one or more pre-defined objective functions."
+"Design Variables:", "Variables that represent a candidate solution and define the search space of potential solutions."
+"Objective Function:", "A function that defines the cost or quality of a solution and is to be optimized (minimized or maximized)."
+"Constraints:", "Optional conditions that solutions must satisfy to be considered feasible, defining solution feasibility."
+"Search:", "A process focused on finding a goal state by taking feasible actions, possibly while minimizing cost."
+"Optimization:", "A process focused on finding an optimal solution, possibly while satisfying constraints."
+"Search vs Optimization:", "Although search problems often have costs associated with actions and can be formulated as optimization problems, optimization problems can frequently be formulated as search problems with an associated cost function."
+
+"Greedy best-first hill climbing": "An algorithm that iteratively improves a candidate solution by selecting the highest quality neighboring solution until no further improvements can be made",
+"Design variable": "A representation of a candidate solution within a search space, such as an integer number in the set Z",
+"Objective function": "A function that defines the quality of a solution, used to guide the optimization process, such as maximizing -x^2",
+"Optimality": "A measure of whether an algorithm is guaranteed to find the best possible solution; hill climbing is not guaranteed to find optimal solutions",
+"Time complexity": "The worst-case scenario of the number of operations an algorithm takes to run, for hill climbing it is O(mnp) where m is the maximum number of iterations, n is the maximum number of neighbors, and p is the time to generate each neighbor",
+"Space complexity": "The worst-case scenario of the amount of memory an algorithm uses, for hill climbing it is O(nq) where n is the maximum number of neighbors, and q is the memory used to represent the design variable",
+"Greedy local search optimization algorithm": "A type of optimization algorithm that makes the best immediate choice at each step, quickly finding a local optimum but possibly missing the global optimum",
+"Local optimum": "A solution that is better than all its neighboring solutions but not necessarily the best overall solution",
+"Global optimum": "The best possible solution to an optimization problem, which may not be found by hill climbing algorithms due to their local search nature"
+
+"Hill Climbing Algorithm:","A search algorithm that starts from an initial state and iteratively moves to better neighboring states to find the optimal solution. However, it may get stuck in local optima or plateaus."
+"Simulated Annealing:","A probabilistic optimization algorithm that allows for occasional moves to worse neighboring states, helping to avoid getting stuck in local optima, and gradually reduces the probability of such moves as it converges towards the global optimum."
+"Probability in Simulated Annealing:","A factor used to decide whether to accept a worse neighboring solution, based on the difference in quality between the current solution and the neighbor, and the current temperature."
+"Neighbor Selection:","The process of randomly picking a neighboring solution from the available options in the search space during the simulated annealing algorithm."
+"Temperature in Simulated Annealing:","A parameter that controls the likelihood of accepting worse neighboring solutions, starting with a high value for exploration and decreasing over time according to a schedule."
+"Probability Function:","A function, typically $e^{\Delta E/T}$, used to calculate the probability of accepting a worse neighboring solution in simulated annealing, based on the difference in quality ($\Delta E$) and the current temperature (T)."
+"Temperature Schedule:","A rule or function used to gradually decrease the temperature in simulated annealing, such as T = aT, where a is a number close to 1 (e.g., 0.95)."
+"Termination Criteria:","Conditions under which the simulated annealing algorithm stops, such as reaching a minimum temperature or the solution no longer changing significantly."
+"Global Optimum:","The best possible solution in the entire search space, as opposed to local optima, which are the best solutions within their limited region."
+"Time and Space Complexity:","The computational resources required to run an algorithm, depending on the specific problem and implementation. In simulated annealing, these complexities can vary widely and may sometimes be worse than brute force."
+
+
+"Design Variable and Search Space:", "The variables that define the problem and the space in which the solution can be found."
+"Objective Function:", "A function that evaluates the quality of a solution and is used to guide the optimization process."
+"Constraints:", "Conditions that a solution must satisfy to be considered valid."
+"Algorithm Operators:", "Components of an optimization algorithm that define how solutions are represented, initialized, and modified during the search process."
+"Representation:", "The way a design variable is represented in the optimization algorithm."
+"Initialization Procedure:", "The method used to generate the initial solution(s) for the optimization algorithm."
+"Neighbourhood Operator:", "A function that modifies a solution to produce a new, neighboring solution in the search space."
+"Strategy to Deal with Constraints:", "An approach for handling constraints in an optimization algorithm, ensuring that the algorithm can find valid solutions."
+"Implicit Constraints:", "Constraints that are inherently built into the problem formulation, without the need for explicit definition."
+"Explicit Constraints:", "Constraints that are explicitly defined and must be satisfied for a solution to be considered valid."
+"Death Penalty:", "A method for handling constraints where a large penalty is added to the objective function value when a constraint is violated."
+"Level of Feasibility:", "A measure of how close a solution is to satisfying all constraints."
+"Complete Algorithm:", "An algorithm that is guaranteed to find a feasible solution if one exists."
+
+
+
+"Supervised Learning:","A type of machine learning where the model learns from labeled training data and predicts appropriate outputs for new inputs.",
+"Unsupervised Learning:","A type of machine learning where the model learns from unlabeled data to find patterns or relationships within the data.",
+"Reinforcement Learning:","A type of machine learning where an agent learns to make decisions by interacting with its environment and receiving feedback in the form of rewards or penalties.",
+"Classification:","A type of supervised learning problem where the output is one of a finite set of discrete values, such as spam or not spam.",
+"Regression:","A type of supervised learning problem where the output is a continuous value, such as a stock price prediction.",
+"Training Data:","A set of input-output pairs used to train a supervised learning model.",
+"Testing Data:","A set of input-output pairs used to evaluate the performance of a supervised learning model after it has been trained.",
+"Input:","Also known as attributes, features, or independent variables, these are the data points used to make a prediction in supervised learning.",
+"Output:","Also known as target, response, or dependent variable, this is the value that the supervised learning model aims to predict.",
+"Function:","Also known as hypothesis or predictor, this is the mathematical relationship between inputs and outputs that the supervised learning model learns.",
+"Overfitting:","A situation where a model is too complex and fits the training data too closely, resulting in poor performance on new data.",
+"Underfitting:","A situation where a model is too simple and does not capture the underlying patterns in the training data, resulting in poor performance on new data."
+
+
+
+"Univariate Linear Regression:", "A type of regression analysis where a single independent variable is used to predict a dependent variable."
+"Loss Function:", "A measure of how well a prediction model is performing by quantifying the difference between predicted values and actual values, also known as cost function or error function."
+"Mean Square Error (MSE):", "A commonly used loss function for regression problems, calculated as the average of the squared differences between predicted and actual values."
+"Gradient Descent:", "An optimization algorithm used to minimize a cost function by iteratively updating model parameters based on the gradient of the cost function with respect to each parameter."
+"Gradient:", "A vector representing the rate of change of a function with respect to its variables, consisting of partial derivatives with respect to each variable."
+"Partial Derivative:", "The rate of change of a multivariable function with respect to one variable, while keeping the other variables constant."
+"Multivariate Regression:", "A type of regression analysis where multiple independent variables are used to predict a dependent variable."
+"Univariate Non-linear Regression:", "A type of regression analysis where a single independent variable is used to predict a dependent variable using non-linear relationships, such as higher-order polynomials."
+
+
+"Logistic Regression:", "A linear model for classification that involves model formulation, cost function, and learning algorithm by gradient descent."
+"Classification:", "The task of assigning an input data point to one of two or more classes based on its attributes."
+"Decision Boundary:", "A threshold used to separate classes, such as a point, line, plane, or hyperplane, depending on the number of attributes."
+"Sigmoid Function:", "A nonlinear function that takes a single argument and returns a value between 0 and 1, representing the probability that the label is 1."
+"Cost Function:", "A function used to measure the difference between predicted and ground-truth values, helping to optimize the weights of the model."
+"Mean Squared Error:", "A cost function used in linear regression that may not be suitable for logistic regression due to producing a highly curved function."
+"Gradient Descent:", "An optimization algorithm used to minimize the cost function by iteratively updating the model's parameters."
+"Gradient Vector:", "A component vector of partial derivatives with respect to each variable, used in gradient descent to update the model's parameters."
+"No Free Lunch (NFL) Theorem:", "A theoretical result stating that no AI classification algorithm can outperform all others on average across all problems, implying the need for multiple learning methods and experimentation on the task at hand."
+
+"k-Nearest Neighbours:","A non-parametric classification framework that predicts the class of a new data point based on the majority vote of its k nearest neighbours in the training data.",
+"Parametric Model:","A model that summarizes data with a set of parameters, making the training data 'useless' after the model is trained.",
+"Non-parametric Model:","A model that cannot be characterized by a bounded set of parameters and considers all training examples for each prediction, also known as instance- or memory-based training.",
+"Hyperparameter:","A parameter that defines aspects of the model and is not learned from the training data.",
+"Manhattan Distance:","A distance metric on a 2D plane calculated by summing the absolute differences of the coordinates.",
+"Hamming Distance:","A distance metric for comparing two binary data strings by counting the number of differing bits.",
+"Euclidean Distance:","A distance metric representing the shortest straight line path between two points on a 2D plane, calculated using the Pythagorean theorem.",
+"k-NN Algorithm:","A method for classifying new data points based on the majority vote of the k nearest neighbours in the training data.",
+"k-NN for Regression Problems:","An approach that predicts the value of a new data point based on the average or median of the k nearest neighbours in the training data.",
+"Normalisation:","A process that adjusts the scales of different numeric independent variables to ensure equal influence on distance calculations.",
+"Pros of k-NN:","Simple and fast training, and predictions based on most similar examples from the training data.",
+"Cons of k-NN:","Requires large memory space to store all data and slow computation with many training examples and dimensions.",
+"Complexity:","A measure of the computational effort required for an algorithm, often expressed using big O notation.",
+"Binary Tree:","A data structure that runs in O(log N) time and can be used to store data for k-NN algorithms.",
+"Hash Table:","A data structure that runs in O(1) time and can be used to store data for k-NN algorithms.",
+"Evaluation Procedures:","Methods to determine the effectiveness of a supervised learning model, including holdout validation, k-fold cross-validation, and leave-one-out validation.",
+"Holdout Validation:","An evaluation method that randomly splits data into a training set and a validation set, trains the model on the training set, and evaluates the model on the validation set.",
+"k-Fold Cross-Validation:","An evaluation method that splits the training data into k disjoint sets, trains the model on k-1 sets, and evaluates the model on the remaining set, repeating k times and averaging the performance.",
+"Leave-One-Out Validation:","An evaluation method that leaves out a single example for validation, trains the model on the remaining data, and repeats for all examples, averaging the validation errors."
+
+"Clustering:", "A technique in unsupervised learning where observations are grouped into clusters based on their similarity, aiming for high intra-cluster similarity and low inter-cluster similarity.",
+"Dimensionality Reduction:", "The process of reducing the number of features or attributes in a dataset to a lower-dimensional representation, which helps save storage, computation, and reduce noise.",
+"Distance Functions:", "Functions used to measure the similarity or dissimilarity between observations, such as Euclidean, Manhattan or Chebychev distances.",
+"Min-max Normalization:", "A data preprocessing technique that rescales attribute values to a range of [0, 1], based on the minimum and maximum values of the attribute. It is sensitive to outliers.",
+"Z-score Normalization:", "A data preprocessing technique where attribute values are standardized to have a mean of 0 and a standard deviation of 1, making attributes contribute equally to similarity measures.",
+"Distance Matrix:", "A matrix representing the pairwise distances between observations in a dataset, used as input for some clustering algorithms.",
+"Partitional Clustering:", "A type of clustering algorithm that generates a single partition of the data into clusters, aiming to maximize intra-cluster similarity and minimize inter-cluster similarity. Examples include K-means and K-medoids.",
+"Hierarchical Clustering:", "A type of clustering algorithm that generates a sequence of nested partitions, forming a hierarchy of clusters. Examples include agglomerative clustering and divisive clustering.",
+"Model-Based Clustering:", "A type of clustering algorithm that assumes the data is generated from a mixture of probability distributions, each representing a different cluster. An example is the Expectation-Maximization (EM) algorithm.",
+"Inertia:", "A measure of intra-cluster similarity, calculated as the sum of squared distances between observations and their cluster centers.",
+"Dissimilarity:", "A measure of inter-cluster similarity, calculated as the sum of inertia values for all clusters, penalizing larger clusters with higher variability."
+
+
+
+
+
+
+
+

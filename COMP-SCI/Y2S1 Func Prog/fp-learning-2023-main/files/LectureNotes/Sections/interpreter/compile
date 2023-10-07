@@ -1,0 +1,2 @@
+# Compile the command line interface with optimization option -O2:
+ghc --make -O2 Runxy.hs

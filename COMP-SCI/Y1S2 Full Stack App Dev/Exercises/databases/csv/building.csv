@@ -1,0 +1,6 @@
+building_id, building_name, building_description, resource_generated
+1,Farm,Produces food for the kingdom, 1
+2,Lumber Mill,Produces wood for the kingdom, 2
+3,Stone Quarry,Produces stone for the kingdom, 3
+4,Gold Mine,Produces gold for the kingdom, 4
+5,Marketplace,Allows for the exchange of resources between kingdoms, 4 
