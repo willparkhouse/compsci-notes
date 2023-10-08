@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Extract Haskell code from all markdown files:
-
-for file in *.md; do
-    runhaskell ../../Resources/mdtohs.hs < "$file" >  "${file%.md}.hs"
-done

@@ -1,9 +1,0 @@
-#! /bin/bash
-
-MDTOHS=../../../Resources/mdtohs.hs
-
-
-runhaskell ${MDTOHS} < Interpreter.md > Interpreter.hs
-runhaskell ${MDTOHS} < Parser.md > Parser.hs
-runhaskell ${MDTOHS} < Runxy.md > Runxy.hs
-runhaskell ${MDTOHS} < AbstractSyntax.md > AbstractSyntax.hs
