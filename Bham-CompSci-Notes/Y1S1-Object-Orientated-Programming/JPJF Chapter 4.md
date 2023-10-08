@@ -122,7 +122,7 @@ public class Employee
 
 The `this` keyword means that `this.empNum` refers to the field in the `Employee` class and the `empNum` refers to the locally declared variable that we pass the constructor when we instantiate an object.
 
-The `this` keyword can also be used to overload constructors. In the example below, we could write 4 constructors as in 4-24, but if we want to add code to restrict `stuNum` to between 0 and 999, or GPA to below 4, we would need to edit each constructor. Instead, we can use the `this` keyword to call the two-parameter constructor. Because each of these constructors calls one **master constructor**, we would only need to edit the code in this master constructor.![[Pasted image 20221014225538.png]]
+The `this` keyword can also be used to overload constructors. In the example below, we could write 4 constructors as in 4-24, but if we want to add code to restrict `stuNum` to between 0 and 999, or GPA to below 4, we would need to edit each constructor. Instead, we can use the `this` keyword to call the two-parameter constructor. Because each of these constructors calls one **master constructor**, we would only need to edit the code in this master constructor.![](Images/Pasted%20image%2020221014225538.png)
 
 **More On `static` Methods & Variables**
 `static` variables are homogenous amongst all objects within the class. You can use them, for example, to track the number of objects of that type. With our employee class we would:
@@ -146,7 +146,7 @@ Note the `final` keyword makes the variable immutable. `final` variables must be
 **Using Imported, Pre-written Constants & Methods**
 You can import classes, like we have with `System` and `JOptionPane`, that have pre-written classes and features to write code faster. These are both **packages**, or a **library of classes**. `java.lang` is a package that is implicitly imported to every Java program, this contains the `System` class. We can import other packages like `java.time` or `javax.swing`, which contain the `LocalDate` and `JOptionPane` classes respectively.
 The `Math` class is part of `java.lang`, and is imported implicitly. It contains Pi and e as `static double` values, and various methods as shown below:
-![[Pasted image 20221015005410.png]]
+![](Images/Pasted%20image%2020221015005410.png)
 To import custom classes you can either:
 	1. Use the entire path with the class name
 	2. Import the class

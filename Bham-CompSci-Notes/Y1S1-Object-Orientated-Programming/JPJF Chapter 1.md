@@ -1,4 +1,4 @@
-[[JPJF Chapter 1]]
+[JPJF Chapter 1](JPJF%20Chapter%201.md)
 __Java Overview pdf__
 
 Java is a high level language. Programs are written in Java Source Files (plaintext), these are parsed by the Java Compiler to byte-code and executed by the Java Virtual Machine (JVM)
@@ -35,7 +35,7 @@ The capitalised `Main` is the class name, and this **must** match the title of t
 
 This boilerplate is required for the program to compile correctly.
 
-![[chrome_YvpOkpwr06.png]]
+![](Images/chrome_YvpOkpwr06.png)
 	This shows us the anatomy of a Java statement. 
 
 Java can output to command line or via a GUI. We run tests in the command line usually.
@@ -54,7 +54,7 @@ Use Camel Case
 	-Start class names with an uppercase letter
 		eg TwosComplementer, WowCoolClass, PotatoMasher
 Java identifies cannot use the Java reserved keywords, or true, false and null
-![[chrome_1n3b2x9zpi.jpg]]
+![](Images/chrome_1n3b2x9zpi.jpg)
 	(Java reserved keywords)
 
 **Scope

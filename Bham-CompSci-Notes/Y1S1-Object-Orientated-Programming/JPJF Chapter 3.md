@@ -13,7 +13,7 @@ Statements that are put after a return statement are **unreachable** as they wil
 Curly braces within a method block create a **nested block**. Variables declared in the nested block are only accessible within this block.
 
 **Overloading** a method is the act of defining multiple methods with the same name that require different arguments. When calling an overloaded method, **the datatype of the arguments changes which method runs**. 
-![[chrome_uLkVn53X8T.png]]
+![](Images/chrome_uLkVn53X8T.png)
 
 This is very useful, but can lead to some ambiguity. For example, if we had these two methods:
 `public static void calculateinterest(int bal, double rate)`

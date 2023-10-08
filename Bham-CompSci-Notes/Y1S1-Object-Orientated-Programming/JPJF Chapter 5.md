@@ -62,5 +62,5 @@ If the first statement, `(account1 < account1 )` is true, then `smallerBalance` 
 
 **Operator Precedence**
 Its good practice to separate operators with parentheses, but here's the precedence table:
-![[chrome_CP9JIyvSzF.png]]
+![](Images/chrome_CP9JIyvSzF.png)
 

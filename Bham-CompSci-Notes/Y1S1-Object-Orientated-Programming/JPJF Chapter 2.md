@@ -60,9 +60,9 @@ WHEREAS
 will print nothing and 53 respectively. This is because the aCharValue has not be passed a string but a numerical value so it corresponds to ht^I in the unicode table, and aNumValue corresponds to the character 9, which is 53 in the unicode table.
 
 Below you can see the Unicode values from 0 through 127 and their character equivalents.
-![[chrome_HicrnDgJ0i.png]]
+![](Images/chrome_HicrnDgJ0i.png)
 You can also assign an "escape sequence" to a char data type, such as backspace, tab, etc
-![[chrome_N8W1GXnthX.png]]
+![](Images/chrome_N8W1GXnthX.png)
 When you want to produce a console output on multiple links you can either use the println() method multiple times, use text blocks OR print a newline escape sequence (`\n`) within a println() call such as:
 	`system. out . println ( "Hello\nthere " ) ;`
 
