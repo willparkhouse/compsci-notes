@@ -1,6 +1,8 @@
 # Welcome! 
 
-Here you find my notes from my studies in Artificial Intelligence and Computer Science at the University of Birmingham!
+Here you find my notes from my studies in Artificial Intelligence and Computer Science at the University of Birmingham!  
+<br>
+Apologies for the confusing formatting in some files, unfortuantely Obisidian does not adhere to the markdown standard for line breaks, like GitHub does - for the best user exprience, clone this repo and open in Obsidian.MD :-)
 ## Year 1
 #### Term 1
 [Data Structures and Algorithms](Bham-CompSci-Notes/Y1S1-Data-Structures-and-Algorithms/0.%20DSA.md)\
