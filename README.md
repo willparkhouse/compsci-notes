@@ -17,4 +17,4 @@ Apologies for the confusing formatting in some files, unfortuantely Obisidian do
 [Operating Systems and Systems Programming](Bham-CompSci-Notes/Y2S1-Operating-Systems-and-Systems-Programming/0.%20Operating%20Systems%20and%20Systems%20Programming.md)\
 
 #### Term 2
-[0. Artificial Intelligence 2](Bham-CompSci-Notes/Y2S2-Artificial-Intelligence-2/0.%20Artificial%20Intelligence%202.md)
+[Artificial Intelligence 2](Bham-CompSci-Notes/Y2S2-Artificial-Intelligence-2/0.%20Artificial%20Intelligence%202.md)
