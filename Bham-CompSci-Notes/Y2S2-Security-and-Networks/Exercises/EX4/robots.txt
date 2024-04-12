@@ -1,4 +1,0 @@
-User-Agent: *
-Disallow: /monkeys/ # my monkey photo collection
-Disallow: /admin/ # administrator panel
-Disallow: /hitman.php # need to be one of us
